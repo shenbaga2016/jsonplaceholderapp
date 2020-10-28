@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+
 import { AppComponent } from './app.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,8 +14,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    Ng2SearchPipeModule,
-    FormsModule
+        InfiniteScrollModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

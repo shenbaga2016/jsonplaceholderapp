@@ -5,11 +5,18 @@
 
   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a image by id or title">
 
-  <button (click)="getData()">Fetch Data</button>
+
 </div>
-<div class="gallery" *ngFor="let image of data | filter:searchText">
-  <a target="_blank" [href]="image.href">
-    <img [src]="image.thumbnailUrl" width="200" height="200">
-  </a>
-  <div class="desc">{{image.id}} - {{image.title}}</div>
+<br>
+<br>
+
+<div class="container">
+  <div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"
+       style="height: 600px; overflow-y: scroll;">
+    <div class="gallery" *ngFor="let item of myPhotosList | filter:searchText"  style="margin-top: 10px;">
+      <img  src="{{item.url}}" width="200" height="200"/>
+      <div class="desc">{{item.id}} - {{item.title}}</div>
+    </div>
+  </div>
 </div>
+

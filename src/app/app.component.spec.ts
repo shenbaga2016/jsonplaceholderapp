@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'jsonplaceholderapp'`, () => {
+  it(`should have as title 'scroll'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('jsonplaceholderapp');
+    expect(app.title).toEqual('scroll');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('jsonplaceholderapp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('scroll app is running!');
   });
 });
