@@ -10,7 +10,7 @@ import { Photos, PhotosObj } from './_modal';
 })
 export class AppComponent implements OnInit {
 
-  title = 'app';
+  title = 'scroll';
   searchText;
   myPhotosList: Photos[] = [];
   page: number = 1;
