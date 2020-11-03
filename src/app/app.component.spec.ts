@@ -3,14 +3,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MydataserviceService } from './mydataservice.service';
-import { browser, logging , by, element } from 'protractor';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FormsModule } from '@angular/forms';
+
 describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
     imports: [
     HttpClientModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FormsModule,
+    InfiniteScrollModule
     ],
       declarations: [
         AppComponent
